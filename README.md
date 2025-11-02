@@ -1,6 +1,6 @@
 # 🤖Ai Avatar Agent 
 
-![Ai Agent ](./public/demo.png)
+
 
 This repository demonstrates how to integrate **HeyGen Interactive Avatars** into a **Next.js** application using the official [HeyGen Streaming Avatar SDK](https://github.com/HeyGen-Official/StreamingAvatarSDK).
 
