@@ -34,8 +34,9 @@ It allows you to:
 
 ### 1️⃣ Clone this repository
 
-``git clone https://github.com/your-username/heygen-avatar-demo.git
-cd heygen-avatar-demo``
+``[git clone https://github.com/Sachin0613/Ai-avatar-agent.git]``
+
+``cd heygen-avatar-demo``
 
 2️⃣ Install dependencies
 bash
