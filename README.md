@@ -36,10 +36,12 @@ It allows you to:
 
 ``git clone https://github.com/your-username/heygen-avatar-demo.git
 cd heygen-avatar-demo``
+
 2️⃣ Install dependencies
 bash
 Copy code
 ``npm install``
+
 3️⃣ Setup your environment variables
 Create a file named .env.local in the root of your project and add the following:
 
@@ -47,6 +49,7 @@ ini
 Copy code
 ``HEYGEN_API_KEY=sk_V2_your_heygen_api_key_here
 NEXT_PUBLIC_BASE_API_URL=https://api.heygen.com``
+
 ⚠️ **Important:**
 
 Don’t include quotes (" ") around the API key.
@@ -54,7 +57,9 @@ Don’t include quotes (" ") around the API key.
 Restart the Next.js dev server after adding .env.local.
 
 You can find your HeyGen API key here:
+
 **HeyGen Settings → Subscriptions & API**
+
 
 4️⃣ (Optional) Add OpenAI API key (if you use GPT features)
 If you want to connect avatar interactions to OpenAI, add this line in .env.local:
@@ -62,41 +67,50 @@ If you want to connect avatar interactions to OpenAI, add this line in .env.loca
 ini
 Copy code
 ``OPENAI_API_KEY=sk-your-openai-key``
+
 5️⃣ Run the development server
 bash
 Copy code
 ``npm run dev``
+
 Then open →
 🌐 **http://localhost:3000**
 
-You should see the HeyGen Interactive Avatar Demo.
+You should see the **Ai Avatar Agent Demo** .
 
 ## Folder Structure
-csharp
-Copy code
+
+
+## 📂 Project Folder Structure
+
+```bash
 heygen-avatar-demo/
 │
 ├── app/
 │   ├── api/
 │   │   └── get-access-token/
-│   │       └── route.ts         # Server-side token generation
-│   └── page.tsx                 # Main UI page
+│   │       └── route.ts              # Server-side token generation
+│   └── page.tsx                      # Main UI page
 │
 ├── components/
-│   ├── Input.tsx                # Input component
-│   ├── NavBar.tsx               # Navigation bar
-│   ├── AvatarConfig/            # Avatar configuration UI
-│   └── InteractiveAvatar.tsx    # Avatar streaming logic
+│   ├── Input.tsx                     # Input component
+│   ├── NavBar.tsx                    # Navigation bar
+│   ├── AvatarConfig/                 # Avatar configuration UI
+│   └── InteractiveAvatar.tsx         # Avatar streaming logic
 │
 ├── public/
-│   └── demo.png
+│   └── demo.png                      # Demo screenshot
 │
 ├── package.json
 └── README.md
+```
+
+
+
 🔐 API Route Example
 Here’s how the API route securely generates a token using your HeyGen API key:
 
-ts
+```ts
 Copy code
 // /app/api/get-access-token/route.ts
 export async function POST() {
@@ -123,16 +137,23 @@ export async function POST() {
     return new Response("Failed to get access token", { status: 500 });
   }
 }
+```
 🧠 **How to Use the Demo**
 1️⃣ Click Start Session to create an avatar session.
+
 2️⃣ The avatar will appear and start interacting.
+
 3️⃣ You can enter custom Avatar ID and Voice ID.
+
 4️⃣ Close the session and start again to test different configurations.
+
 
 💡 How to Get Avatar and Voice IDs
 Avatar IDs: labs.heygen.com/interactive-avatar
 
+
 **Voice IDs: HeyGen Voice API Docs**
+
 
 🧰 **Troubleshooting**
 Issue	Fix
@@ -141,9 +162,11 @@ Issue	Fix
 ❌ "API key missing" in console	.env.local not loaded or variable name typo
 ❌ Token not generated	Ensure you’re calling POST request from /api/get-access-token
 
+
 ## License
 This project is licensed under the MIT License.
 Feel free to modify and use it for learning or internal demos.
+
 
 🙌 Acknowledgements
 Special thanks to:
@@ -153,6 +176,7 @@ HeyGen Official Team for the Interactive Avatar SDK.
 Next.js for the web framework.
 
 OpenAI for optional GPT integrations.
+
 
 ## Author
 Developed by Sachin Yadav
