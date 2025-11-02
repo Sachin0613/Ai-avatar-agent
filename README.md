@@ -33,45 +33,45 @@ It allows you to:
 ## ⚙️ Getting Started
 
 ### 1️⃣ Clone this repository
-```bash
-git clone https://github.com/your-username/heygen-avatar-demo.git
-cd heygen-avatar-demo
+
+``git clone https://github.com/your-username/heygen-avatar-demo.git
+cd heygen-avatar-demo``
 2️⃣ Install dependencies
 bash
 Copy code
-npm install
+``npm install``
 3️⃣ Setup your environment variables
 Create a file named .env.local in the root of your project and add the following:
 
 ini
 Copy code
-HEYGEN_API_KEY=sk_V2_your_heygen_api_key_here
-NEXT_PUBLIC_BASE_API_URL=https://api.heygen.com
-⚠️ Important:
+``HEYGEN_API_KEY=sk_V2_your_heygen_api_key_here
+NEXT_PUBLIC_BASE_API_URL=https://api.heygen.com``
+⚠️ **Important:**
 
 Don’t include quotes (" ") around the API key.
 
 Restart the Next.js dev server after adding .env.local.
 
 You can find your HeyGen API key here:
-👉 HeyGen Settings → Subscriptions & API
+**HeyGen Settings → Subscriptions & API**
 
 4️⃣ (Optional) Add OpenAI API key (if you use GPT features)
 If you want to connect avatar interactions to OpenAI, add this line in .env.local:
 
 ini
 Copy code
-OPENAI_API_KEY=sk-your-openai-key
+``OPENAI_API_KEY=sk-your-openai-key``
 5️⃣ Run the development server
 bash
 Copy code
-npm run dev
+``npm run dev``
 Then open →
-🌐 http://localhost:3000
+🌐 **http://localhost:3000**
 
 You should see the HeyGen Interactive Avatar Demo.
 
-🧩 Folder Structure
+## Folder Structure
 csharp
 Copy code
 heygen-avatar-demo/
@@ -123,7 +123,7 @@ export async function POST() {
     return new Response("Failed to get access token", { status: 500 });
   }
 }
-🧠 How to Use the Demo
+🧠 **How to Use the Demo**
 1️⃣ Click Start Session to create an avatar session.
 2️⃣ The avatar will appear and start interacting.
 3️⃣ You can enter custom Avatar ID and Voice ID.
@@ -132,16 +132,16 @@ export async function POST() {
 💡 How to Get Avatar and Voice IDs
 Avatar IDs: labs.heygen.com/interactive-avatar
 
-Voice IDs: HeyGen Voice API Docs
+**Voice IDs: HeyGen Voice API Docs**
 
-🧰 Troubleshooting
+🧰 **Troubleshooting**
 Issue	Fix
 ❌ API request failed with status 400	Invalid endpoint — check your route or base URL
 ❌ API request failed with status 401	Invalid or missing API key. Verify .env.local and restart server
 ❌ "API key missing" in console	.env.local not loaded or variable name typo
 ❌ Token not generated	Ensure you’re calling POST request from /api/get-access-token
 
-🧾 License
+## License
 This project is licensed under the MIT License.
 Feel free to modify and use it for learning or internal demos.
 
@@ -154,6 +154,6 @@ Next.js for the web framework.
 
 OpenAI for optional GPT integrations.
 
-🧑‍💻 Author
+## Author
 Developed by Sachin Yadav
 ✨ “AI Avatar Agent” – Bringing Human-Like Interaction to Web Apps
